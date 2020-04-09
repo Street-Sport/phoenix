@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link  href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300%7CTitillium+Web:400,600,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  
+  
+    <div class="wrapper">
+      <div class="container">
+    
+        <!-- ПРЕЛОАДЕР -->
+        <div class="loader"></div>
+    
+        <!-- СТАТУС БАР -->
+        <div class="feed">
+          
+          <div class="bar row">
+    
+            <div class="bar__left">
+              <div class="bar__circle">
+                <span class="bar__circle--on"></span>
+                <span class="bar__circle--on"></span>
+                <span class="bar__circle--on"></span>
+                <span class="bar__circle--on bar__circle--off"></span>
+                <span class="bar__circle--on bar__circle--off"></span>
+              </div>
+              <i class="fas fa-wifi"></i>
+            </div>
+    
+            <div class="bar__center">
+              <p>12:00</p>
+            </div>
+    
+            <div class="bar__right">
+              <i class="fab fa-bluetooth-b"></i>
+              <span>100%</span>
+              <i class="fas fa-battery-full"></i>
+            </div>
+    
+          </div> <!-- bar -->
+
+          <nav id="nav">
+            <ul class="nav__ul">
+              <li class="nav__li inbox" data-modal="#inbox"><a href="#">Входящие</a> </li>
+              <li class="nav__li" data-modal="#stat"><a href="#">Статистика</a></li>
+              <li class="nav__li" data-modal="#calendar"><a href="#">Календарь</a></li>
+              <li class="nav__li" data-modal="#map"><a href="#">Карта</a></li>
+              <li class="nav__li av" data-modal="#sign-in"><a href="#">Настройки</a></li>
+            </ul>
+          </nav>
+
+          <div class="feed__top row">
+            <div style="width: 30px;">
+              <button class="nav-toggle" id="nav_toggle" type="button">
+              <span class="nav-toggle__item">Menu</span>
+            </button></div>
+            
+            <h3>Тренды</h3>
+            <span data-modal="#map" style="cursor: pointer;"><i class="fas fa-globe-americas"></i></span> 
+          </div>
+
+          <div class="feed__timeline">
+
+            <div class="card">
+              <div class="card__user row">
+
+                <div class="card__user-left">
+                  <img class="user__pic" src="img/card/avatar1.png" alt="">
+                  <p class="user__name">Екатерина</p>
+                  <p class="user__tag">@ekaterina</p>
+                </div>
+
+                <div class="card__user-right">
+                  <p class="user__active">3 минуты назад</p>
+                  <p class="user__city">Лос анджелес <i class="fas fa-map-marker-alt"></i></p>
+                </div>
+
+              </div>
+
+              <img src="img/card/content-1.jpg" alt="">
+
+              <p class="card__text">Парк является фаворитом среди спортсменов в Калифорнии, и он определенно заслуживает этого. Парк укомплектован множеством
+              гладких берегов</p>
+            </div>
+
+            <div class="card">
+              <div class="card__user row">
+            
+                <div class="card__user-left">
+                  <img class="user__pic" src="img/card/avatar2.png" alt="">
+                  <p class="user__name">Марина</p>
+                  <p class="user__tag">@Marienne</p>
+                </div>
+            
+                <div class="card__user-right">
+                  <p class="user__active">35 минуты назад</p>
+                  <p class="user__city">Нью Йорк <i class="fas fa-map-marker-alt"></i></p>
+                </div>
+            
+              </div>
+            
+              <img src="img/card/content-2.jpg" alt="">
+            
+              <p class="card__text">Знаменитый мост на котором снимали самые крутые фильмы и музыкальные клипы!</p>
+            </div>
+
+            <div class="card">
+              <div class="card__user row">
+            
+                <div class="card__user-left">
+                  <img class="user__pic" src="img/card/avatar3.png" alt="">
+                  <p class="user__name">Максим</p>
+                  <p class="user__tag">@max</p>
+                </div>
+            
+                <div class="card__user-right">
+                  <p class="user__active">34 минуты назад</p>
+                  <p class="user__city">Гвинея <i class="fas fa-map-marker-alt"></i></p>
+                </div>
+            
+              </div>
+            
+              <img src="img/card/content-3.jpg" alt="">
+            
+              <p class="card__text">Приятный морской бриз в компании лучших друзей - незабываемый отпуск который останется со мной на всю.</p>
+            </div>
+          </div>
+    
+        </div> <!-- feed -->
+    
+
+
+        
+    <div class="modal" id="inbox">
+      <div class="modal__dialog">
+
+        <div class="mod-inbox">
+          <div class="bar row">
+          
+            <div class="bar__left">
+              <div class="bar__circle">
+                <span class="bar__circle--on"></span>
+                <span class="bar__circle--on"></span>
+                <span class="bar__circle--on"></span>
+                <span class="bar__circle--on bar__circle--off"></span>
+                <span class="bar__circle--on bar__circle--off"></span>
+              </div>
+              <i class="fas fa-wifi"></i>
+            </div>
+          
+            <div class="bar__center">
+              <p>12:00</p>
+            </div>
+          
+            <div class="bar__right">
+              <i class="fab fa-bluetooth-b"></i>
+              <span>100%</span>
+              <i class="fas fa-battery-full"></i>
+            </div>
+          
+          </div> <!-- bar -->
+
+          <div class="feed__top row">
+            <div style="width: 30px;">
+              <button class="modal__close" type="button" data-close>
+                <i class="fas fa-times-circle"></i>
+              </button>
+            </div>
+          
+            <h3>Входящие</h3>
+            <img class="user__pic" src="img/card/avatar1.png" alt="">
+          </div>           
+
+          <div class="inbox-card">
+            <h5 class="inbox__title inbox__title-on">Викторов Алексей</h5> <span>12:22</span>
+            <p class="inbox__theme">Обновление дизайна</p>
+            <p class="inbox__text line-clamp">Доброго времени суток, есть для тебя новый материал, который находится на нашем сайте. Пожалуйста, отпишись как можно скорее после ознакомления с ним!</p>
+          </div>
+
+          <div class="inbox-card">
+            <h5 class="inbox__title inbox__title-off">Инна Николаевна</h5> <span>06:22</span>
+            <p class="inbox__theme">zip02</p>
+            <p class="inbox__text line-clamp">Высылаю тебе последний релиз ПО, для ознакомления. Если будут какие-либо вопросы, можешь обращаться прям ко мне, удачи.</p>
+          </div>
+
+          <div class="inbox-card">
+            <h5 class="inbox__title inbox__title-off">Инна Николаевна</h5> <span>05:12</span>
+            <p class="inbox__theme">zip01</p>
+            <p class="inbox__text line-clamp">Высылаю тебе последний релиз ПО, для ознакомления. Если будут какие-либо вопросы,
+              можешь обращаться прям ко мне, удачи.</p>
+          </div>
+        
+          </div>
+      </div><!-- /.modal__dialog -->
+    </div><!-- /.modal -->
+
+
+    <div class="modal" id="stat">
+  <div class="modal__dialog">
+
+    <div class="mod-inbox">
+      <div class="bar row">
+
+      <div class="bar__left">
+      <div class="bar__circle">
+      <span class="bar__circle--on"></span>
+      <span class="bar__circle--on"></span>
+      <span class="bar__circle--on"></span>
+      <span class="bar__circle--on bar__circle--off"></span>
+      <span class="bar__circle--on bar__circle--off"></span>
+      </div>
+      <i class="fas fa-wifi"></i>
+      </div>
+
+      <div class="bar__center">
+      <p>12:00</p>
+      </div>
+
+      <div class="bar__right">
+      <i class="fab fa-bluetooth-b"></i>
+      <span>100%</span>
+      <i class="fas fa-battery-full"></i>
+      </div>
+
+      </div> <!-- bar -->
+
+      <div class="feed__top row">
+        <div style="width: 30px;">
+        <button class="modal__close" type="button" data-close>
+        <i class="fas fa-times-circle"></i>
+        </button>
+        </div>
+      </div>
+
+      <div class="stat">
+
+        <div class="stat-diagram">
+
+          <div class="stat-img stat-img--one">
+            <img class="stat-img__pic stat-img__pic" src="img/stat/avatar1.png" alt="">
+            <p class="stat-text">1.3 km</p>
+          </div>
+          <div class="stat-img stat-img--two active">
+            <img class="stat-img__pic stat-img__pic" src="img/stat/avatar2.png" alt="">
+            <p class="stat-text">2 km</p>
+          </div>
+          <div class="stat-img stat-img--three">
+            <img class="stat-img__pic stat-img__pic" src="img/stat/avatar3.png" alt="">
+            <p class="stat-text">1.1 km</p>
+          </div>
+
+          <div class="stat__time">
+            <span class="stat__time-of">8:00</span>
+            <span class="stat__time-deco"></span>
+            <span class="stat__time-deco"></span>
+            <span class="stat__time-deco"></span>
+            <span class="stat__time-of stat__time-of-on">10:00</span>
+            <span class="stat__time-deco"></span>
+            <span class="stat__time-deco"></span>
+            <span class="stat__time-deco"></span>
+            <span class="stat__time-of">12:00</span>
+          </div>
+
+          
+        </div>
+
+        <div class="stat__calendar">
+       
+            <div class="calendar__item">
+              <p class="calendar__day">THURS</p>
+              <p class="calendar__date">1</p>
+            </div>
+
+            <div class="calendar__item">
+              <p class="calendar__day">THURS</p>
+              <p class="calendar__date">2</p>
+            </div>
+
+            <div class="calendar__item active">
+              <p class="calendar__day">THURS</p>
+              <p class="calendar__date">3</p>
+            </div>
+
+            <div class="calendar__item">
+              <p class="calendar__day">THURS</p>
+              <p class="calendar__date">4</p>
+            </div>
+
+            <div class="calendar__item">
+              <p class="calendar__day">THURS</p>
+              <p class="calendar__date">5</p>
+            </div>      
+   
+
+        </div>
+
+        <div class="row stat__circle">
+          <div class="stat__circle-left">
+
+            <div class="hours row">
+              <p class="hours__text-top">Активное время</p>
+              <p class="hours__time">2:56</p>
+              <p class="hours__text-bott">часы</p>
+            </div>
+
+          </div>
+          <div class="stat__circle-right">
+            <div class="calori row">
+              <p class="calori__text-top">Потрачено</p>
+              <p class="calori__time">80,9</p>
+              <p class="hours__text-bott">калорий</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div><!-- /.modal__dialog -->
+    </div><!-- /.modal -->
+        
+
+    <div class="modal" id="calendar">
+      <div class="modal__dialog">
+    
+        <button class="modal__close" type="button" data-close="">
+          <i class="fas fa-times-circle"></i>
+        </button>
+
+        <div class="calendar__inner">
+
+
+
+          <div class="calendar">
+            <div class="front">
+              <div class="current-date">
+                <h1>Пятница 15</h1>
+                <h1>Май 2020</h1>
+              </div>
+          
+              <div class="current-month">
+                <ul class="week-days">
+                  <li>ПН</li>
+                  <li>ВТ</li>
+                  <li>СР</li>
+                  <li>ЧТ</li>
+                  <li>ПТ</li>
+                  <li>СБ</li>
+                  <li>ВС</li>
+                </ul>
+          
+                <div class="weeks">
+                  <div class="first">
+                    <span class="last-month">28</span>
+                    <span class="last-month">29</span>
+                    <span class="last-month">30</span>
+                    <span class="last-month">31</span>
+                    <span>01</span>
+                    <span>02</span>
+                    <span>03</span>
+                  </div>
+          
+                  <div class="second">
+                    <span>04</span>
+                    <span>05</span>
+                    <span class="event">06</span>
+                    <span>07</span>
+                    <span>08</span>
+                    <span>09</span>
+                    <span>10</span>
+                  </div>
+          
+                  <div class="third">
+                    <span>11</span>
+                    <span>12</span>
+                    <span>13</span>
+                    <span>14</span>
+                    <span class="active">15</span>
+                    <span>16</span>
+                    <span>17</span>
+                  </div>
+          
+                  <div class="fourth">
+                    <span>18</span>
+                    <span>19</span>
+                    <span>20</span>
+                    <span>21</span>
+                    <span>22</span>
+                    <span>23</span>
+                    <span>24</span>
+                  </div>
+          
+                  <div class="fifth">
+                    <span>25</span>
+                    <span>26</span>
+                    <span>27</span>
+                    <span>28</span>
+                    <span>29</span>
+                    <span>30</span>
+                    <span>31</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="back">
+              <input placeholder="Новое событие?">
+              <div class="info">
+                <div class="date">
+                  <p class="info-date">
+                    Дата: <span>Апр 15, 2020</span>
+                  </p>
+                  <p class="info-time">
+                    Время: <span>12:35</span>
+                  </p>
+                </div>
+                <div class="address">
+                  <p>
+                    Ланч ∙ 12:20 - 13:20
+                  </p>
+                </div>
+                <div class="observations">
+                  <p>
+                    Варшава, кафе "smaczne"
+                  </p>
+                </div>
+              </div>
+          
+              <div class="actions">
+                <!-- <button class="save">
+                  Save <i class="ion-checkmark"></i>
+                </button> -->
+                <button class="dismiss">
+                  Закрыть <i class="ion-android-close"></i>
+                </button>
+              </div>
+            </div>
+          
+          </div>
+
+
+
+
+        </div>
+
+
+      </div><!-- /.modal__dialog -->
+    </div><!-- /.modal -->
+
+
+    <div class="modal" id="sign-in">
+      <div class="modal__dialog">
+    
+        <button class="modal__close" type="button" data-close="">
+          <i class="fas fa-times-circle"></i>
+        </button>
+    
+        <div class="sign-in__inner">
+          <h3 class="sign-in__title">Войдите в систему</h3>
+          <img class="sign-in__pic" src="img/card/avatar2.png" alt="">
+          <form class="sign-in__form" action="#">
+            <input class="sign-in__input" type="text" placeholder="Почта">
+            <input class="sign-in__input" type="password" placeholder="Пароль">
+            <button class="sign-in__btn">Войти</button>
+          </form>
+          <p class="sign-in__creat">Create a new account</p>
+        </div>
+    
+    
+      </div><!-- /.modal__dialog -->
+    </div><!-- /.modal -->
+
+
+
+    <div class="modal" id="map">
+      <div class="modal__dialog">
+    
+        <button class="modal__close" type="button" data-close="">
+          <i class="fas fa-times-circle"></i>
+        </button>
+        
+        <div class="map__inner">
+
+          <div class="map__card row">
+            <div class="map__card-left">
+              <i class="far fa-heart"></i>
+              <p>138</p>
+            </div>
+            <div class="map__card-center">
+              <h4>@Marienne</h4>
+              <p>Длинный Берег, LA</p>
+            </div>
+            <div class="map__card-right">
+              <i class="fas fa-plus"></i>
+              <p>28.3</p>
+            </div>
+            
+            <div class="map__about">
+              <img src="img/card/avatar2.png" alt="">
+            </div>
+
+            <div class="map__info">
+
+              <div class="map__info-time row">
+                <span><i class="far fa-clock"></i></span>
+                <p>35:32</p>
+                <div class="map__deco"><span></span></div>
+              </div>
+
+              <div class="map__info-time row">
+                <span><i class="fas fa-road"></i></span>
+                <p>1658</p>
+                <div class="map__deco"><span class="map__deco-two"></span></div>
+              </div>
+
+            </div>
+
+          </div>
+
+          
+
+          <div class="map__google">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d94337.36808436095!2d-118.47578065595583!3d33.96514091468025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2z0JvQvtGBLdCQ0L3QtNC20LXQu9C10YEsINCa0LDQu9C40YTQvtGA0L3QuNGPLCDQodCo0JA!5e0!3m2!1sru!2sua!4v1585436410700!5m2!1sru!2sua"
+              width="450" height="800" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+              tabindex="0"></iframe>
+          </div>
+        </div>
+        
+    
+    
+        </div>
+    
+    
+      </div><!-- /.modal__dialog -->
+    </div><!-- /.modal -->
+
+
+
+
+      </div> <!-- container -->
+
+
+
+
+  
+    
+        
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
